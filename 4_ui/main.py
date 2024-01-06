@@ -1,7 +1,7 @@
 import requests  # 「pip install requests」などが必要
 import req_driver.config.const as const
 import req_driver.browser_win.win as win
-import req_driver.using_elements.ele as ele
+import req_driver.using_elements.element as ele
 
 # sleep用
 import os
