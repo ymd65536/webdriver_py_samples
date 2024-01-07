@@ -53,3 +53,12 @@ def checkbox(session_id, element_id):
             data='{"type": "pointerUp", "duration": 0}'
         )
     return res
+
+
+def is_selected(session_id, element_id):
+    res = req.get(
+        "/".join([const.WEB_DRIVER_URL, session_id,
+                  'element', element_id, 'selected']),
+        headers=const.REQUEST_HEADERS
+    )
+    return res

@@ -49,9 +49,16 @@ if __name__ == '__main__':
 
         if ele.is_input_type_checkbox(input_element_type):
             print("input checkbox")
+            res = input_ele.is_selected(
+                sessionId, input_element.get(const.ELEMENT_KEY))
+            print(f"is checked {res}")
+
             res = input_ele.checkbox(
                 sessionId, input_element.get(const.ELEMENT_KEY))
-            print(res)
+
+            res = input_ele.is_selected(
+                sessionId, input_element.get(const.ELEMENT_KEY))
+            print(f"is checked {res}")
 
         if ele.is_input_type_button(input_element_type):
             print("input button")
