@@ -1,6 +1,7 @@
 import req_driver.config.const as const
 import req_driver.browser.window as win
 import req_driver.using_elements.element as ele
+import req_driver.using_elements.input_element as input_ele
 
 # sleep用
 import os
@@ -37,15 +38,26 @@ if __name__ == '__main__':
 
         if ele.is_input_type_text(input_element_type):
             print("input text")
+            res = input_ele.send_keys(
+                sessionId, input_element.get(const.ELEMENT_KEY), "test")
+            os.system('sleep 1')
 
         if ele.is_input_type_password(input_element_type):
             print("input password")
+            res = input_ele.send_keys(
+                sessionId, input_element.get(const.ELEMENT_KEY), "password")
 
         if ele.is_input_type_checkbox(input_element_type):
             print("input checkbox")
+            res = input_ele.checkbox(
+                sessionId, input_element.get(const.ELEMENT_KEY))
+            print(res)
 
         if ele.is_input_type_button(input_element_type):
             print("input button")
+            res = input_ele.click_element(
+                sessionId, input_element.get(const.ELEMENT_KEY))
+            print(res)
 
     for cnt in range(5):
         os.system('sleep 1')
