@@ -25,6 +25,14 @@
   function changeHead2() {
     document.getElementsByName('head2').item(0).innerHTML = 'Test Page';
   }
+  function changeCounterSync() {
+    let counter = document.getElementsByName('counter_sync').item(0);
+    counter.innerHTML = 10;
+  }
+  function changeCounterAsync() {
+    let counter = document.getElementsByName('counter_async').item(0);
+    counter.innerHTML = 10;
+  }
 </script>
 
 <body>
@@ -35,6 +43,16 @@
     <input type="text" id="id_attr" value="">
     <input type="checkbox" name="checkbox" value="checkbox">
     <p name="paragraph">ここに挿入</p>
+
+    <div>
+      counter_async:
+      <p name="counter_async">0</p>
+    </div>
+    <div>
+      counter_sync:
+      <p name="counter_sync">0</p>
+    </div>
+
   </div>
 </body>
 
