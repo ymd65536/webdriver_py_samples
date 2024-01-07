@@ -3,23 +3,38 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>WebDriver Test Page</title>
+  <title>WebDriver Test Page Execute Sync</title>
 </head>
 
 <script>
-  function changeText() {
-    document.getElementsByName('text').item(0).value = 'WebDriver';
+  function changeNameAttr() {
+    document.getElementsByName('name_attr').item(0).value = 'WebDriver';
+  }
+  function changeIdAttr() {
+    document.getElementById('id_attr').value = 'WebDriver Test Page';
+  }
+  function changeCheckbox() {
+    document.getElementsByName('checkbox').item(0).checked = true;
+  }
+  function changeParagraph() {
+    document.getElementsByName('paragraph').item(0).innerHTML = 'WebDriver Test Page';
+  }
+  function changeHead1() {
+    document.getElementsByName('head1').item(0).innerHTML = '---Welcome WebDriver Test Page---';
+  }
+  function changeHead2() {
+    document.getElementsByName('head2').item(0).innerHTML = 'Test Page';
   }
 </script>
 
 <body>
   <div class="container">
-    <h1>WebDriver Test Page</h1>
-    <a href="https://google.com/">google link</a>
-    <input type="text" name="text" value="">
-    <input type="password" name="password" value="">
+    <h1 name="head1">WebDriver Test Page1</h1>
+    <h2 name="head2">WebDriver Test Page2</h2>
+    <input type="text" name="name_attr" value="">
+    <input type="text" id="id_attr" value="">
     <input type="checkbox" name="checkbox" value="checkbox">
-    <input type="button" onclick="changeText();" value="text change">
+    <p name="paragraph">ここに挿入</p>
   </div>
 </body>
 
